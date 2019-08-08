@@ -1,18 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import AppRouter from "./ui/views/AppRouter";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          <code>Batman</code>
-        </p>
-      </header>
-    </div>
-  );
-}
+const App = () => <AppRouter/>;
 
 export default App;
