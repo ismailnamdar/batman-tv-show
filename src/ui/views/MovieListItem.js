@@ -3,6 +3,15 @@ import Tag from "./Tag";
 import {Link} from "react-router-dom";
 import { string, number, array } from "prop-types";
 
+/**
+ * every item in the movie list
+ * @param imageSrc
+ * @param id
+ * @param title
+ * @param genres
+ * @returns {*}
+ * @constructor
+ */
 const MovieListItem = ({imageSrc, id, title, genres}) => {
 	return <Link to={"/show-detail/" + id}>
 		<li className={"movie-list-item"}>
