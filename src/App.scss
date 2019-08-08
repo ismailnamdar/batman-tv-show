@@ -76,6 +76,7 @@ $secondary-color: #fdff00;
 
 .title {
   font-size: 24px;
+  font-weight: bold;
   color: #e5e5e5;
 }
 
@@ -112,7 +113,7 @@ $secondary-color: #fdff00;
 }
 
 .movie-list-item:hover {
-  background-color: rosybrown;
+  background-color: #03396c;
 }
 
 .movie-list-title {
@@ -135,17 +136,59 @@ $secondary-color: #fdff00;
   justify-content: center;
   align-items: center;
   background-color: $primary-color;
+  background-image: url("assets/lightning.png");
+  background-position: top right;
+  background-repeat: no-repeat;
+  padding: 2em;
   img {
     width: 400px;
+    box-shadow: 11px 13px 32px 6px #474846;
+    margin-right: 2em;
   }
   p {
-    color: bisque;
+    color: white;
   }
   .show-detail {
     margin: 1em;
-  }
-  .movie-summary {
     width: 40%;
+  }
+}
+
+.single-stat {
+  width: 56px;
+  height: 56px;
+  border-radius: 28px;
+  font-weight: bold;
+  border-style: dashed;
+  border-width: 1px;
+  border-color: $secondary-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+.info-row-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 1em;
+  margin-top: 0.5em;
+  .first-icon {
+    color: white;
+    font-size: 18px;
+  }
+  .icon {
+    color: white;
+    font-size: 18px;
+    margin-left: 0.5em;
+  }
+  .info-row-label {
+    margin-left: 0.5em;
+    color: white;
+    font-size: 12px;
   }
 }
 
