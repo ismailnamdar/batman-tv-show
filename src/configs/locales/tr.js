@@ -3,6 +3,8 @@ export default {
 		titles: {
 			batmanTvShows: "Batman TV Programları"
 		},
-		placeholders: {}
+		placeholders: {
+			searchShow: "Program ara"
+		}
 	}
 };
