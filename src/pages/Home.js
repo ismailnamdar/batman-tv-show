@@ -22,16 +22,16 @@ const Home = () => {
 	const data = useSelector(state => state.movie.data);
 	useEffect(() => {
 		dispatch({
-			type: ACTION_TYPE.FETCH_REQUESTED,
-			payload: {method: "GET", path: "/search/shows", params: {q: showName}}
+			type: ACTION_TYPE.HTTP_REQUEST,
+			payload: {method: "GET", path: "/search/shows", params: {q: showName}, type: ACTION_TYPE.SEARCH_MOVIE}
 		});
 	}, [dispatch, showName]);
 	const handleChange = useCallback((e) => setShowName(e.target.value.length === 0 ? REQUESTED_SHOW : e.target.value), [setShowName]);
 	return <div className={"home"}>
 		<input placeholder={t("placeholders.searchShow")} onChange={handleChange}/>
 		<MovieList>
-			{data.map(({show}) => <MovieListItem key={"batman" + show.id} id={show.id} imageSrc={mediumImageSafeGet(show)}
-																					 title={show.name} genres={show.genres}/>)}
+			{data.map((movie) => <MovieListItem key={"batman" + movie.id} id={movie.id} imageSrc={mediumImageSafeGet(movie)}
+																					 title={movie.name} genres={movie.genres}/>)}
 		</MovieList>
 	</div>;
 };

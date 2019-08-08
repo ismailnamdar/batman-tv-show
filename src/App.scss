@@ -125,6 +125,27 @@
   margin-left: 0.8em;
 }
 
+.show-detail-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #070707;
+  height: 1000px;
+  img {
+    width: 400px;
+  }
+  p {
+    color: bisque;
+  }
+  .show-detail {
+    margin: 1em;
+  }
+  .movie-summary {
+    width: 40%;
+  }
+}
+
 input {
   width: 250px;
   height: 30px;
