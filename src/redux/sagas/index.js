@@ -9,16 +9,16 @@ const _axios = axios.create({
 });
 // worker Saga: will be fired on USER_FETCH_REQUESTED actions
 function* fetch(action) {
+	const { method, params, path, type } = action.payload;
 	try {
-		const { method, params, path } = action.payload;
 		const { data } = yield call(_axios,  {
 			method,
 			params,
 			url: path,
 		});
-		yield put({type: "FETCH_SUCCEEDED", payload: { data }});
+		yield put({type: type + "_SUCCEEDED", payload: { data }});
 	} catch (e) {
-		yield put({type: "FETCH_FAILED", payload: {message: e.message}});
+		yield put({type: type + "_FAILED", payload: {message: e.message}});
 	}
 }
 
@@ -27,7 +27,7 @@ function* fetch(action) {
   Allows concurrent fetches of user.
 */
 function* watcher() {
-	yield takeEvery("FETCH_REQUESTED", fetch);
+	yield takeEvery("HTTP_REQUEST", fetch);
 }
 
 export default watcher;
