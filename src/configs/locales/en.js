@@ -1,6 +1,8 @@
 export default {
 	translations: {
-		titles: {},
+		titles: {
+			batmanTvShows: "Batman TV Shows"
+		},
 		placeholders: {}
 	}
 };
