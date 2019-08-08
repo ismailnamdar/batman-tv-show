@@ -3,4 +3,4 @@ export const LANGUAGE_KEYS = {
 	TR: "tr"
 };
 
-export const API_BASE_URL = "http://api.tvmaze.com";
+export const API_BASE_URL = "https://api.tvmaze.com";
