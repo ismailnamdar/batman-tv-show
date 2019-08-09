@@ -12,7 +12,7 @@ const originalImageSafeGet = pathOr("", ["image", "original"]);
 const nameSafeGet = pathOr("", ["name"]);
 const genresSafeGet = pathOr([], ["genres"]);
 const ratingSafeGet = pathOr(null, ["rating", "average"]);
-const countrySafeGet = pathOr("", ["network", "country", "name"]);
+const countrySafeGet = pathOr("", ["network", "country", "code"]);
 const premieredSafeGet = pathOr("", ["premiered"]);
 
 const ShowDetail = ({ match }) => {
