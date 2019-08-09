@@ -11,8 +11,8 @@ const summarySafeGet = pathOr("", ["summary"]);
 const originalImageSafeGet = pathOr("", ["image", "original"]);
 const nameSafeGet = pathOr("", ["name"]);
 const genresSafeGet = pathOr([], ["genres"]);
-const ratingSafeGet = pathOr(0, ["rating", "average"]);
-const languageSafeGet = pathOr("", ["language"]);
+const ratingSafeGet = pathOr(null, ["rating", "average"]);
+const countrySafeGet = pathOr("", ["network", "country", "name"]);
 const premieredSafeGet = pathOr("", ["premiered"]);
 
 const ShowDetail = ({ match }) => {
@@ -22,13 +22,14 @@ const ShowDetail = ({ match }) => {
 		if(movie == null) {
 			dispatch({ type: ACTION_TYPE.HTTP_REQUEST, payload: { path: "shows/" + match.params.id, type: ACTION_TYPE.SINGLE_MOVIE }})
 		}
-	}, [movie]);
+	}, [dispatch, movie, match.params.id]);
+	const rating = ratingSafeGet(movie);
 	return <div style={{ height: window.innerHeight, width: "100%", backgroundColor: "#070707" }}><div className={"show-detail-container"}>
 		<img src={originalImageSafeGet(movie)} alt={nameSafeGet(movie)}/>
 		<div className={"show-detail"}>
-			<SingleStat value={ratingSafeGet(movie)}/>
+			{rating != null && <SingleStat value={rating}/>}
 			<Title value={nameSafeGet(movie)}/>
-			<InfoRow language={languageSafeGet(movie)} premiered={premieredSafeGet(movie)}/>
+			<InfoRow country={countrySafeGet(movie)} premiered={premieredSafeGet(movie)}/>
 			{genresSafeGet(movie).map((genre) => <Tag key={movie.title + genre} value={genre}/>)}
 			<div dangerouslySetInnerHTML={{__html: summarySafeGet(movie).replace(/(<? *script)/gi, 'illegalscript')}}/>
 		</div>

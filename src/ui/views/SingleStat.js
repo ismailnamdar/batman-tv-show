@@ -1,5 +1,5 @@
 import React from "react";
-import { string } from "prop-types";
+import { string, number, oneOfType } from "prop-types";
 
 /**
  * display single stat in a circle
@@ -12,7 +12,7 @@ const SingleStat = ({ value }) => <div className={"single-stat"}>
 </div>;
 
 SingleStat.propTypes = {
-	value: string.isRequired
+	value: oneOfType([string, number]).isRequired
 };
 
 export default SingleStat;

@@ -135,6 +135,7 @@ $secondary-color: #fdff00;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   background-color: $primary-color;
   background-image: url("assets/lightning.png");
   background-position: top right;
@@ -190,6 +191,10 @@ $secondary-color: #fdff00;
     color: white;
     font-size: 12px;
   }
+}
+
+.loading {
+  background: transparent url("assets/batman.gif") no-repeat scroll center center;
 }
 
 input {
