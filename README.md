@@ -2,11 +2,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Installation
 
-- Clone or downloaad the project.
+- Clone or download the project.
 
 - Then, in the project directory, you can run:
 
 ### `npm start`
+
+# Demo
+Project is available in [batmantv.netlify.com](batmantv.netlify.com)
 
 ## Technology Stack
 - **react**
