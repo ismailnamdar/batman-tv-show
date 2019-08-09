@@ -23,13 +23,14 @@ export default function movie(state = initialState, action) {
 	} else if(action.type === ACTION_TYPE.SEARCH_MOVIE_SUCCEEDED) {
 		const { data } = action.payload;
 		const _data = data.map((d) => d.show);
-		const dataMapById = _data.reduce((acc, movie) => {
+		const _sortedData = _data.sort((first, second) => new Date(second.premiered) - new Date(first.premiered));
+		const dataMapById = _sortedData.reduce((acc, movie) => {
 			acc[movie.id] = movie;
 			return acc;
 		}, {});
 		return {
 			...state,
-			data: _data,
+			data: _sortedData,
 			dataMapById,
 			loading: false
 		};
