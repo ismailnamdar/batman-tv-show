@@ -5,7 +5,7 @@ import useToggle from "../../hooks/useToggle";
 import { LANGUAGE_KEYS } from "../../configs/constants";
 
 /**
- * Globe icon that toggles language change
+ * globe icon that toggles language change
  * @returns {*}
  * @constructor
  */

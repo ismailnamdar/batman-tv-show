@@ -1,10 +1,14 @@
+$primary-color: #070707;
+$secondary-color: #fdff00;
+$third-color: #03396c;
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.spinner {
+  animation: spinner-anim infinite 20s linear;
+  height: 100vh;
   pointer-events: none;
 }
 
@@ -29,7 +33,7 @@
   padding: 0;
   overflow: hidden;
   background-color: #070707;
-  border-bottom: bisque;
+  border-bottom: white;
   border-style: solid;
   border-width: 1px;
   text-decoration: none;
@@ -40,8 +44,8 @@
     text-align: center;
     padding: 1em;
   }
-  li.left:hover {
-    background-color: #d6b35e;
+  li:hover {
+    background-color: $third-color;
   }
   li.right {
     float: right;
@@ -73,19 +77,20 @@
 
 .title {
   font-size: 24px;
+  font-weight: bold;
   color: #e5e5e5;
 }
 
 .tag {
   padding: 0.3em;
   border-style: solid;
-  border-width: 1px;
+  border-width: 2px;
   border-radius: 2px;
-  border-color: lightgrey;
+  border-color: $secondary-color;
   font-size: 12px;
-  background-color: #d6b35e;
-  color: black;
-  margin-right: 0.1em;
+  background-color: rgba(0,0,0,0);
+  color: $secondary-color;
+  margin-right: 0.4em;
 }
 
 .movie-list {
@@ -109,27 +114,101 @@
 }
 
 .movie-list-item:hover {
-  background-color: rosybrown;
+  background-color: $third-color;
 }
 
 .movie-list-title {
   color: #e5e5e5;
   text-align: center;
-  margin-bottom: 0.5em
+  font-weight: bold;
+  margin-bottom: 0.5em;
 }
 
 .movie-list-title-container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-left: 0.8em
+  margin-left: 0.8em;
+}
+
+.show-detail-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: $primary-color;
+  background-image: url("assets/lightning.png");
+  background-position: top right;
+  background-repeat: no-repeat;
+  padding: 2em;
+  img {
+    width: 400px;
+    box-shadow: 11px 13px 32px 6px #474846;
+    margin-right: 2em;
+  }
+  p {
+    color: white;
+  }
+  .show-detail {
+    margin: 1em;
+    width: 40%;
+  }
+}
+
+.single-stat {
+  width: 56px;
+  height: 56px;
+  border-radius: 28px;
+  font-weight: bold;
+  border-style: dashed;
+  border-width: 1px;
+  border-color: $secondary-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+.info-row-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 1em;
+  margin-top: 0.5em;
+  .first-icon {
+    color: white;
+    font-size: 16px;
+  }
+  .icon {
+    color: white;
+    font-size: 16px;
+    margin-left: 0.5em;
+  }
+  .info-row-label {
+    margin-left: 0.5em;
+    color: white;
+    font-size: 12px;
+  }
+}
+
+.loading {
+  background: transparent url("assets/batman.gif") no-repeat scroll center center;
+}
+
+input {
+  width: 250px;
+  height: 30px;
+  border-radius: 15px;
 }
 
 a {
   text-decoration: none;
 }
 
-@keyframes App-logo-spin {
+@keyframes spinner-anim {
   from {
     transform: rotate(0deg);
   }

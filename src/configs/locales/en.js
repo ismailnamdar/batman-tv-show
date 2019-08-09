@@ -3,6 +3,8 @@ export default {
 		titles: {
 			batmanTvShows: "Batman TV Shows"
 		},
-		placeholders: {}
+		placeholders: {
+			searchShow: "Search show"
+		}
 	}
 };

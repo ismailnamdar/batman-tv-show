@@ -3,10 +3,19 @@ import Tag from "./Tag";
 import {Link} from "react-router-dom";
 import { string, number, array } from "prop-types";
 
+/**
+ * every item in the movie list
+ * @param imageSrc
+ * @param id
+ * @param title
+ * @param genres
+ * @returns {*}
+ * @constructor
+ */
 const MovieListItem = ({imageSrc, id, title, genres}) => {
 	return <Link to={"/show-detail/" + id}>
 		<li className={"movie-list-item"}>
-			<img src={imageSrc} alt={"movie poster"}/>
+			<img className={"loading"} src={imageSrc} alt={title + "movie poster"}/>
 			<div className={"movie-list-title-container"}>
 				<span className={"movie-list-title"}>{title}</span>
 				<div>
