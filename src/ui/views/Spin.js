@@ -6,6 +6,6 @@ import batman from "../../assets/batman.gif";
  * @returns {*}
  * @constructor
  */
-const Spin = () => <img src={batman} className="App-logo" alt="logo" />;
+const Spin = () => <img src={batman} className="spinner" alt="logo" />;
 
 export default Spin;

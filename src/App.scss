@@ -6,9 +6,9 @@ $third-color: #03396c;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.spinner {
+  animation: spinner-anim infinite 20s linear;
+  height: 100vh;
   pointer-events: none;
 }
 
@@ -180,11 +180,11 @@ $third-color: #03396c;
   margin-top: 0.5em;
   .first-icon {
     color: white;
-    font-size: 18px;
+    font-size: 16px;
   }
   .icon {
     color: white;
-    font-size: 18px;
+    font-size: 16px;
     margin-left: 0.5em;
   }
   .info-row-label {
@@ -208,7 +208,7 @@ a {
   text-decoration: none;
 }
 
-@keyframes App-logo-spin {
+@keyframes spinner-anim {
   from {
     transform: rotate(0deg);
   }
