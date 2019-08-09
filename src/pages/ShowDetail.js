@@ -12,8 +12,8 @@ const originalImageSafeGet = pathOr("", ["image", "original"]);
 const nameSafeGet = pathOr("", ["name"]);
 const genresSafeGet = pathOr([], ["genres"]);
 const ratingSafeGet = pathOr(null, ["rating", "average"]);
-const countrySafeGet = pathOr("", ["network", "country", "code"]);
-const premieredSafeGet = pathOr("", ["premiered"]);
+const countrySafeGet = pathOr(null, ["network", "country", "code"]);
+const premieredSafeGet = pathOr(null, ["premiered"]);
 
 const ShowDetail = ({ match }) => {
 	const movie = useSelector(state => state.movie.dataMapById[match.params.id]);
