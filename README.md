@@ -22,6 +22,7 @@ Project is available in [batmantv.netlify.com](batmantv.netlify.com)
 - **accessibility** for all!
 - **responsive** layout
 - **ramda** for functional programming
+- **date-fns** for handling date objects
 - **netlify** for continuous integration and deployment
 - **cypress** for integration test
 - **ui/ux** simple and cool design
