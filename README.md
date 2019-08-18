@@ -9,7 +9,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ### `npm start`
 
 # Demo
-Project is available in [batmantv.netlify.com](batmantv.netlify.com)
+Project is available in [batmantv.netlify.com](https://batmantv.netlify.com)
 
 ## Technology Stack
 - **react**
