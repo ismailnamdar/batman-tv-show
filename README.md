@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 - Clone or download the project.
 
-- Then, in the project directory, you can run:
+- Then, in the project directory, run the following commands
 ### `npm i`
 ### `npm start`
 
@@ -22,6 +22,7 @@ Project is available in [batmantv.netlify.com](batmantv.netlify.com)
 - **accessibility** for all!
 - **responsive** layout
 - **ramda** for functional programming
-- **netlify** for continuous integration and development
+- **netlify** for continuous integration and deployment
 - **cypress** for integration test
-- **ui/ux** simple and cool design 
+- **ui/ux** simple and cool design
+- **jsdocs** for documentation
