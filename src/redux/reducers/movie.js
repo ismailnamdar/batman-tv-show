@@ -24,8 +24,8 @@ export default function movie(state = initialState, action) {
 		const { data } = action.payload;
 		const _data = data.map((d) => d.show);
 		const _sortedData = _data.sort((first, second) => new Date(second.premiered) - new Date(first.premiered));
-		const dataMapById = _sortedData.reduce((acc, movie) => {
-			acc[movie.id] = movie;
+		const dataMapById = _sortedData.reduce((acc, _movie) => {
+			acc[_movie.id] = _movie;
 			return acc;
 		}, {});
 		return {
@@ -35,7 +35,10 @@ export default function movie(state = initialState, action) {
 			loading: false
 		};
 	} else if(action.type === ACTION_TYPE.SEARCH_MOVIE_FAILED) {
-		return state;
+		return {
+			...state,
+			loading: false
+		};
 	} else if(action.type === ACTION_TYPE.SINGLE_MOVIE_SUCCEEDED) {
 		const { data } = action.payload;
 		return {
@@ -47,7 +50,10 @@ export default function movie(state = initialState, action) {
 			loading: false
 		};
 	} else if(action.type === ACTION_TYPE.SINGLE_MOVIE_FAILED) {
-		return state;
+		return {
+			...state,
+			loading: false
+		};
 	} else {
 		return state;
 	}

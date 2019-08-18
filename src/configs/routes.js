@@ -2,7 +2,7 @@ import React, { lazy } from "react";
 import { GiBatMask } from "react-icons/gi";
 
 const Home = lazy(() => import('../pages/Home'));
-const ShowDetail = lazy(() => import('../pages/ShowDetail'));
+const MovieDetail = lazy(() => import('../pages/MovieDetail'));
 
 const routes = [
 	{
@@ -14,7 +14,7 @@ const routes = [
 	{
 		path: "/show-detail/:id",
 		exact: false,
-		Component: ShowDetail
+		Component: MovieDetail
 	}
 ];
 
