@@ -8,7 +8,7 @@
     "i18next": "^17.0.9",
     "i18next-browser-languagedetector": "^3.0.2",
     "jsdoc": "^3.6.3",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "prop-types": "^15.7.2",
     "ramda": "^0.26.1",
     "react": "^16.8.6",
